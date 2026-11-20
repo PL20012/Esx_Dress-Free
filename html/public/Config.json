@@ -1,0 +1,19 @@
+{
+    "languages": {
+        "ear": "Ear",
+        "neck": "Neck",
+        "watch": "Watch",
+        "bracelet": "Bracelet",
+        "vest": "Vest",
+        "torso": "Torso",
+        "pants": "Pants",
+        "gloves": "Gloves",
+        "hat": "Hat",
+        "shoes": "Shoes",
+        "mask": "Mask",
+        "hair": "Hair",
+        "bag": "Bag",
+        "glasses": "Glasses"
+    },
+    "primaryColor": "#29a7ef"
+}

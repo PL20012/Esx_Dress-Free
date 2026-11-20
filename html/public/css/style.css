@@ -1,0 +1,145 @@
+body {
+    width:  100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    user-select: none;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    z-index: 99999999999;
+    /* background: url("https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/47cebf169084011.6446cd1ea9644.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; */
+}
+
+#root {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6vh;
+}
+
+#root::-webkit-scrollbar {display:none;margin: 0;}
+
+* {
+    box-sizing: border-box;
+}
+
+svg {
+    user-select: none;
+    pointer-events: none;
+}
+
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+
+:root {
+    --wheel-bg: radial-gradient(circle, transparent 32%, rgba(10, 13, 23, 0.90) 32%);
+    --center-bg: rgba(10, 13, 23, 0.85);
+
+    --text-primary: #fff;
+    --text-secondary: rgba(255, 255, 255, 0.55);
+    --yellow: #29a7ef;
+}
+
+@font-face {
+    font-family: 'Akrobat-ExtraBold';
+    src: url(../fonts/Akrobat-ExtraBold.otf);
+}
+
+.app {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    /* zoom: 0.8; */
+}
+
+[data-hide="true"] {
+    display: none;
+    animation: .5s ease-in-out normal fadeout;
+}
+
+[data-hide="false"] {
+    display: flex;
+    animation: .5s ease-in-out normal fadein;
+}
+
+@keyframes fadein {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeout {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.radial-center {
+    width: 22vh;
+    height: 22vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--center-bg);
+    flex-direction: column;
+    position: absolute;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.radial-center > svg {
+    width: 92%;
+    height: 92%;
+    position: absolute;
+}
+
+.radial-center > span {
+    font-family: 'Akrobat-ExtraBold';
+    text-transform: uppercase;
+}
+
+.radial-center span:first-of-type {
+    font-size: 1.35vh;
+    color: var(--text-secondary);
+}
+
+.radial-center span:last-of-type {
+    font-size: 2.5vh;
+    color: var(--yellow);
+}
+
+.radial-wheel {
+    width: 52vh;
+    height: 52vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 50%;
+    background: var(--wheel-bg);
+    z-index: 1;
+}
+
+.radial-wheel > svg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+}
